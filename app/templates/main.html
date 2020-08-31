@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block breadcrumb %}
+    <li class="breadcrumb-item active">Home</li>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="display">Hello there user!!!</h1>
+    <p class="lead">What are you looking for?</p>
+    <hr class="my-4">
+    <a href="{{ url_for('data_structs.ds_home') }}" class="btn btn-primary btn-lg">Data Structures</a>
+    <a href="#" class="btn btn-primary btn-lg">Algorithms</a>
+</div>
+{% endblock %}
