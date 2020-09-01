@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+  pre_build:
+    commands:
+      pip3 install venv
+      virtualenv flask-env
+      source flask-env/bin/activate
+      pip3 install -r requirements.txt

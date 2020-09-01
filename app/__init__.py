@@ -6,16 +6,16 @@ from flask_pymongo import PyMongo
 from app.config import Config
 
 mongo = PyMongo()
+application = Flask(__name__)
 
 
 def create_app(configuration=Config):
-    app = Flask(__name__)
-    app.config.from_object(configuration)
+    application.config.from_object(configuration)
     # mongo.init_app(app)
 
     from app.main.routes import main
     from app.data_structures.routes import ds
 
-    app.register_blueprint(main)
-    app.register_blueprint(ds)
-    return app
+    application.register_blueprint(main)
+    application.register_blueprint(ds)
+    return application
