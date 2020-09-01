@@ -6,7 +6,7 @@ phases:
       python: 3.7
   pre_build:
     commands:
-      pip3 install venv
-      virtualenv flask-env
-      source flask-env/bin/activate
-      pip3 install -r requirements.txt
+      - pip3 install venv
+      - virtualenv flask-env
+      - source flask-env/bin/activate
+      - pip3 install -r requirements.txt
