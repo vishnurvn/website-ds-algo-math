@@ -6,9 +6,8 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="display">Hello there user!!!</h1>
-    <p class="lead">What are you looking for?</p>
-    <hr class="my-4">
-    <a href="{{ url_for('data_structs.ds_home') }}" class="btn btn-primary btn-lg">Data Structures</a>
+    {% for item in data %}
+        <p>{{ item.name }}</p>
+    {% endfor %}
 </div>
 {% endblock %}
