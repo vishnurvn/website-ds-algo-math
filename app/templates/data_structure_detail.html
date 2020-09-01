@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{{ url_for('data_structs.ds_home') }}">Data Structures</a></li>
+    <li class="breadcrumb-item active">Test Route</li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <script src="{{ link.link }}"></script>
+    <ul class="nav nav-tabs">
+        <li class="active">Home</li>
+        <li>None</li>
+    </ul>
+</div>
+{% endblock %}

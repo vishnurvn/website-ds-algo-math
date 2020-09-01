@@ -6,8 +6,12 @@
 
 {% block content %}
 <div class="container">
-    {% for item in data %}
-        <p>{{ item.name }}</p>
-    {% endfor %}
+    <h3>List of available data structures.</h3>
+    <ul class="list-group list-group-flush">
+        {% for item in data %}
+        <a href="{{ url_for('data_structs.test_route', d_s=item.gist) }}"
+           class="btn list-group-item list-group-item-action">{{ item.display_name }}</a>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}
