@@ -11,7 +11,7 @@ def ds_home():
     # data_structure = [{
     #     "name": item['display_name']
     # }]
-    data_structure = {
+    data_structure = [{
         "name": "Linked List"
-    }
+    }]
     return render_template('ds_main.html', data=data_structure)
